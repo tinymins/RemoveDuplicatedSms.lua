@@ -61,7 +61,7 @@ Log(("Duplicate: %d, Filter: %d."):format(nDuplicate, nFilter))
 
 local function packageString(str)
 	if str:find("[, \r\n]") then
-		str = "\"" .. str:gsub("\"", "\\\"") .. "\""
+		str = "\"" .. str:gsub('"', '""') .. "\""
 	end
 	return (str:gsub("\r\n", "\n"))
 end
